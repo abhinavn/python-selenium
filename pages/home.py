@@ -11,7 +11,6 @@ from selenium.webdriver.common.by import By
 from base import Base
 from page import PageRegion
 
-
 class HomePage(Base):
     """This Page Object models the Google Home Page (https://google.com/)."""
 
@@ -22,8 +21,8 @@ class HomePage(Base):
 
 
     def go_to_page(self):
-    """Open the home page."""
-    self.open('/')
+        """Open the home page."""
+        self.open('/')
 
     @property
     def is_search_text_available(self):
