@@ -22,13 +22,13 @@ class TestHomePage(BaseTest):
     def test_that_search_text_field_is_available(self, mozwebqa):
         home_page = HomePage(mozwebqa)
         home_page.go_to_page()
-        Assert.true(is_search_text_available)
+        Assert.true(home_page.is_search_text_available)
 
     @pytest.mark.nondestructive
     def test_that_search_button_is_available(self, mozwebqa):
         home_page = HomePage(mozwebqa)
         home_page.go_to_page()
-        Assert.true(is_search_button_available)
+        Assert.true(home_page.is_search_button_available)
 
 
 
