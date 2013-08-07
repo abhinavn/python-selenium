@@ -1,4 +1,4 @@
 Google Home Page Testing
 ============================
 
-This repository holds example tests writthen using Mozilla selenium framework.
+This repository holds example tests written using Mozilla selenium framework.
