@@ -17,17 +17,20 @@ class HomePage(Base):
 
     # The title of this page, which is used by is_the_current_page() in page.py
     _page_title = u'Google'
-	_search_text_field = (By.CSS_SELECTOR, 'button#gbqfba.gbqfba')
-	_search_button = (By.CSS_SELECTOR, 'button#gbqfba.gbqfba')
+    _search_text_field = (By.NAME, 'q')
+    _search_button = (By.CSS_SELECTOR, 'button#gbqfba.gbqfba')
+
 
     def go_to_page(self):
-        """Open the home page."""
-        self.open('/')
+    """Open the home page."""
+    self.open('/')
 
-	 @property
-	 def is_search_text_available(self):
-	   return self.is_element_present(*self._search_text_field)
-	
-	 @property
-	 def is_search_button_available(self):
-	   return self.is_element_present(*self._search_button)
+    @property
+    def is_search_text_available(self):
+        return self.is_element_present(*self._search_text_field)
+
+    @property
+    def is_search_button_available(self):
+        return self.is_element_present(*self._search_button)
+
+    
